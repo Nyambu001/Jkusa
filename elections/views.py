@@ -4,11 +4,11 @@ from .models import *
 
 def index(request):
     recent_posts = Blog.objects.order_by('-date')[:3]
-    youtube_videos = YouTubeVideo.objects.all()
+    videos = YouTubeVideo.objects.all()
     advertisements = Advertisement.objects.all()
     context = {
         'recent_posts': recent_posts,
-        'youtube_videos': youtube_videos,
+        'videos': videos,
         'ads': advertisements
                }
     return render(request,'index.html', context)

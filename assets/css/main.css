@@ -1,16 +1,4 @@
-/**
-* Template Name: Append
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Montserrat",  sans-serif;
@@ -29,12 +17,12 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #3a3939;  /* The default color of the main navmenu links */
-  --nav-hover-color: #e84545; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #28a745;  /* The default color of the main navmenu links */
+  --nav-hover-color: #28a745; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #3a3939; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #e84545; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #28a745; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -155,7 +143,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 40px;
   margin-right: 8px;
 }
 
@@ -216,7 +204,7 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
   --nav-color: rgba(255, 255, 255, 0.5);
-  --nav-hover-color: #ffffff;
+  --nav-hover-color: #28a745;
 }
 
 /* Index Page Header on Scroll
@@ -225,7 +213,7 @@ h6 {
   --background-color: #ffffff;
   --heading-color: #32353a;
   --nav-color: #3a3939;
-  --nav-hover-color: #e84545;
+  --nav-hover-color: #28a745;
 }
 
 /*--------------------------------------------------------------
@@ -601,7 +589,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-color: #28a745 transparent #28a745 transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -910,7 +898,7 @@ section,
 }
 
 .about .content .read-more {
-  background: var(--accent-color);
+  background:#28a745;
   color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
@@ -932,7 +920,7 @@ section,
 }
 
 .about .content .read-more:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: #28a745;
   padding-right: 19px;
 }
 
@@ -959,8 +947,8 @@ section,
   font-size: 32px;
   line-height: 0;
   transition: all 0.4s ease-out 0s;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
+  background-color: #28a745, transparent 95%);
+  color: #28a745;
 }
 
 .about .icon-box h3 {
@@ -974,7 +962,7 @@ section,
 }
 
 .about .icon-box:hover i {
-  background-color: var(--accent-color);
+  background-color: #28a745;
   color: var(--contrast-color);
 }
 
@@ -1884,7 +1872,7 @@ section,
 .contact .info-item i {
   font-size: 38px;
   line-height: 0;
-  color: var(--accent-color);
+  color: #28a745;
 }
 
 .contact .info-item h3 {
@@ -1900,48 +1888,6 @@ section,
   margin-bottom: 0;
 }
 
-.contact .php-email-form {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  padding: 30px;
-  height: 100%;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
@@ -2872,4 +2818,25 @@ iframe {
   border: 3px solid red; /* Adds a red border for debugging */
   min-height: 250px;
 }
+
+.hidden {
+  display: none;  /* Initially hides the transcript */
+}
+
+.transcript-btn {
+  display: block;
+  margin: 10px auto;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.transcript-btn:hover {
+  background-color: #0056b3;
+}
+
 
