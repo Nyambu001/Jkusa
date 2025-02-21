@@ -21,7 +21,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "your-default-secret-key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False") == "True"
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "jkusa.onrender.com,localhost").split(",")
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'jkusa.onrender.com']
 
 
 # Application definition
@@ -111,11 +111,22 @@ LOGGING = {
     },
 }
 
-# Static files (CSS, JavaScript, Images)
+# settings.py
+
+# The URL for serving static files
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "assets"]  # Your static files directory
-STATIC_ROOT = BASE_DIR / "staticfiles"  # Where collectstatic will copy files
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# The root directory where static files are collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Directories where Django will look for static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+# Use ManifestStaticFilesStorage for production to enable hashing of static files
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
 
 # Media files
 MEDIA_URL = '/media/'
